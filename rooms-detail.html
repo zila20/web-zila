@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Kamar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo-container">
+  <img src="image/logo-grandhotel.png" alt="Logo Grand Hotel" class="logo-img">
+  <div class="logo-text">
+    <h1>GRAND HOTEL</h1>
+    <p>Luxury & Comfort</p>
+  </div>
+    </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html" class="active">Rooms</a></li>
+      <li><a href="penilaian.php">Penilaian</a></li>
+      <li><a href="akun.html" class="akun-icon"><i class="fa-solid fa-user"></i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="room-details">
+  <h2>Daftar Kamar</h2>
+  <div id="room-list" class="room-list-detail"></div>
+</section>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const type = params.get('type');
+  const roomsContainer = document.getElementById('room-list');
+
+  const roomTypes = {
+    standard: { title: "Standard Room", price: 300000, floor: "Lantai 1-2", desc: "Kamar nyaman dengan desain sederhana dan bersih." },
+    deluxe: { title: "Deluxe Room", price: 500000, floor: "Lantai 2", desc: "Kamar luas dengan pemandangan kota." },
+    superior: { title: "Superior Room", price: 800000, floor: "Lantai 4", desc: "Kamar dengan fasilitas tambahan dan tempat tidur empuk." },
+    executive: { title: "Executive Room", price: 100000, floor: "Lantai 5", desc: "Dilengkapi ruang kerja dan ruang tamu pribadi." },
+    suite: { title: "Suite Room", price: 1300000, floor: "Lantai 3–4", desc: "Kamar dengan ruang tamu luas dan view laut." },
+    twin: { title: "Twin Room", price: 500000, floor: "Lantai 2–3", desc: "Dua tempat tidur single untuk keluarga atau teman." },
+    double: { title: "Double Room", price: 600000, floor: "Lantai 3", desc: "Tempat tidur besar dan suasana romantis." }
+  };
+
+  const selected = roomTypes[type];
+
+  for (let i = 1; i <= 10; i++) {
+    const roomCode = `${type.toUpperCase()}-${i.toString().padStart(2, '0')}`;
+
+
+    roomsContainer.innerHTML += `
+      <div class="room-box">
+        <h3>${selected.title} (${roomCode})</h3>
+        <p>Lantai ${selected.floor}</p>
+        <p>Harga: Rp${selected.price.toLocaleString()} / malam</p>
+        <button onclick="window.location.href='booking.html?type=${type}&room=${roomCode}&price=${selected.price}'">
+          Pesan Sekarang
+        </button>
+      </div>`;
+  }
+</script>
+
+</body>
+</html>

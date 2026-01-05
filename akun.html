@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Akun - Grand Hotel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="image/logo-grandhotel.png" alt="Logo Grand Hotel" class="logo-img">
+      <div class="logo-text">
+        <h1>GRAND HOTEL</h1>
+        <p>Luxury & Comfort</p>
+      </div>
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="penilaian.php">Penilaian</a></li>
+      <li><a href="akun.html" class="active" class="akun-icon"><i class="fa-solid fa-user" ></i></a></li>
+      <li><a href="admin/admin_login.html">Admin</a></li>
+    </ul>
+  </header>
+
+<section class="account">
+  <h2>Kelola Akun Anda</h2>
+
+  <div class="account-box">
+   <form id="formAkun">
+
+      <h2>Daftar</h2>
+
+      <label>Nama:</label>
+      <input type="text" id="nama" required placeholder="Masukkan nama Anda">
+
+      <label>Email:</label>
+      <input type="email" id="email" required placeholder="Masukkan email">
+
+      <label>Password:</label>
+      <input type="password" id="password" required placeholder="Kata sandi">
+
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+</section>
+
+<script src="akun.js"></script>
+ <script>
+    if (localStorage.getItem("isLogin") === "true") {
+      window.location.href = "profil.html";
+    }
+  </script>
+
+</body>
+</html>

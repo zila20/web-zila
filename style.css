@@ -1,0 +1,1222 @@
+/* =============================
+   STYLE UTAMA GRAND HOTEL
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== LOGO STYLE ===== */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: linear-gradient(135deg, #ffffff, #becde4);
+  border-bottom: 3px solid #004aad;
+  padding: 15px 0;
+  box-shadow: 0 3px 10px rgba(0, 74, 173, 0.2);
+}
+
+.logo-img {
+  width: 70px;
+  height: auto;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.1));
+}
+
+.logo-text h1 {
+  color: #004aad;
+  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.logo-text p {
+  color: #2a2a2a;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Agar tetap di atas halaman */
+header {
+  background: #becde4;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* 🔝 NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: #003366;
+  padding: 15px 50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  color: #003366;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background: #003366;
+  color: white;
+}
+
+/* 🏡 HOME SECTION */
+.home {
+  display: flex;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* KIRI */
+.home-left {
+  flex: 1;
+  background-color: white;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-left h4 {
+  color: #0056d6;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.home-left h2 {
+  font-size: 2.8em;
+  color: #003366;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.home-left p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.btn-home {
+  display: inline-block;
+  background: linear-gradient(135deg, #0056d6, #003366);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-home:hover {
+  background: #002b70;
+}
+
+/* KANAN */
+.home-right {
+  flex: 1;
+  position: relative;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0, 51, 102, 0.3), rgba(0, 86, 214, 0.4));
+}
+
+/* 📄 ABOUT & CONTACT */
+.about {
+    background:
+        linear-gradient(rgba(222, 226, 229, 0.75), rgba(240, 243, 245, 0.75)),   /* overlay biru transparan */
+        url("image/batik4.jpg");
+    background-size: 200px;
+    background-repeat: repeat;
+    padding: 60px 20px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #003b8b, #0078d4, #00b4ff); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  
+}
+
+.about-desc {
+  color: #0a0a0a;                 
+  font-size: 1.25em;             
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  line-height: 1.8;               
+  text-align: center;
+  font-weight: 500;               
+  letter-spacing: 0.5px;          
+  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+  text-shadow: 
+      0 0 3px white,
+      0 0 6px rgba(255,255,255,0.7);
+  font-family: "Poppins", sans-serif; 
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #141414;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.about-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.about-card p {
+  color: #bbb;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* ⭐ ABOUT */
+.about-services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px auto 60px;
+  max-width: 1100px;
+}
+
+.service-box {
+  background: #ffffff;
+  padding: 25px;
+  width: 230px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.service-box i {
+  font-size: 40px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.service-box h4 {
+  font-size: 1.2em;
+  color: #003366;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.service-box p {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.4;
+}
+
+.contact-section {
+  background:
+        linear-gradient(rgba(222, 226, 229, 0.75), rgba(240, 243, 245, 0.75)),   /* overlay biru transparan */
+        url("image/batik4.jpg");
+  background-size: 200px;
+  background-position: center;
+  padding: 80px 20px;
+  color: white;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #003b8b, #0078d4, #00b4ff); /* WARNA GRADIENT TEKS */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  /* BAYANGAN TEKS */
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+  color: #e8ecf2;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.contact-item {
+  background: #ffffff;
+  color: #0f4c81;
+  padding: 25px 20px;
+  border-radius: 14px;
+  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #0f4c81;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+  transform: translateY(-6px);
+  background: #f7f9fc;
+}
+
+.contact-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0f4c81;
+}
+
+.contact-item p {
+  font-size: 1.05rem;
+  color: #1b2d45;
+}
+
+/* ==========================
+   ACCOUNT
+========================== */
+.account {
+  position: relative;
+  text-align: center;
+  background-color: #003366;
+  padding: 80px 0;
+  overflow: hidden;
+  background: url("image/lobyhotel.jpg") no-repeat center center/cover;
+}
+
+/* Lapisan gelap di atas gambar */
+.account::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0; 
+  background: rgba(0, 0, 0, 0.55); /* efek gelap */
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.account h2 {
+  color: #f3f4f7;
+}
+
+/* Pastikan isi tetap di atas lapisan gelap */
+.account * {
+  position: relative;
+  z-index: 1;
+}
+
+.account-box {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.account-box form {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 400px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.account-box form h2 {
+  margin-bottom: 15px;
+  color: #0056d6;
+}
+
+.account-box form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: white;
+}
+
+.account-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #003366;
+  border-radius: 5px;
+}
+
+.account-box button {
+  background: #fff;
+  color: #003366;
+  border: 2px solid #0056d6;
+  padding: 20px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 50%;
+}
+
+/* ==================================
+   PROFIL ACCOUNT AND LOGOUT SECTION
+   ==================================*/
+.account-logout {
+  text-align: center;
+  padding: 90px 20px 40px;
+
+  /* background gambar + overlay hitam */
+  background: 
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url("image/lobyhotel.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+  position: relative;
+  z-index: 1;
+}
+
+.account-logout h2 {
+  color: #e3efff;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.account-box-logout {
+  width: 500px;
+  margin: -70px auto 90px;
+  padding: 40px;
+
+  background: rgba(10, 20, 50, 0.55);      /* dark blue glass */
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 
+      0 20px 45px rgba(0,0,0,0.55),
+      inset 0 0 25px rgba(255,255,255,0.05);
+
+  animation: fadeIn 1s ease;
+}
+
+.profile-avatar {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #0d47a1, #2196f3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 70px;
+  color: white;
+
+  box-shadow:
+     0 0 25px rgba(33,150,243,0.65),
+     0 15px 25px rgba(0,0,0,0.4),
+     inset 0 -10px 15px rgba(255,255,255,0.15);
+}
+
+.account-box-logout p {
+  font-size: 20px;
+  margin: 16px 0;
+  color: #d6e4ff;
+  letter-spacing: 0.3px;
+  align-items: center;
+}
+
+.account-box-logout strong {
+  color: #f2f3f5;
+  font-weight: 700;
+}
+
+#logoutBtn {
+  width: 100%;
+  padding: 15px;
+
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  color: white;
+
+  border: none;
+  border-radius: 14px;
+  margin-top: 30px;
+
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+
+  box-shadow:
+      0 12px 28px rgba(13, 71, 161, 0.55),
+      inset 0 0 10px rgba(255,255,255,0.05);
+
+  transition: 0.3s ease-in-out;
+}
+
+#logoutBtn:hover {
+  background: linear-gradient(135deg, #0d47a1, #072c70);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(7, 44, 112, 0.6);
+}
+
+#logoutBtn:active {
+  transform: scale(0.96);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========
+   🏨 ROOM 
+============== */
+.rooms {
+  padding: 60px 80px;
+  background: #f7faff;
+}
+
+.rooms h2 {
+  text-align: center;
+  color: #003366;
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+}
+
+.rooms h1 {
+  text-align: center;
+  color: #002b80;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 3px 8px rgba(0,86,214,0.15);
+  background: linear-gradient(90deg, #002b80, #00b4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.room-card {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,86,214,0.2);
+}
+
+.room-card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.room-info {
+  padding: 25px 30px;
+  flex: 1;
+}
+
+.room-info h3 {
+  color: #003366;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.room-info p {
+  color: #444;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.fasilitas {
+  background: #eef4ff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+.fasilitas h4 {
+  margin-bottom: 6px;
+  color: #003366;
+  font-size: 1em;
+}
+
+.fasilitas .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 0.95em;
+  color: #0056d6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #0056d6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #003e99;
+}
+
+/* TOMBOL LIHAT DETAIL */
+.btn {
+  background-color: #007bff;
+  color: white;
+  
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  bottom: 2px;
+}
+
+.btn:hover {
+  background-color: #608dba;
+  transition: background 0.3s;
+}
+
+/* ==========================
+   🏨 ROOM DETAIL
+========================== */
+.room-list-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 50px;
+}
+
+.room-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #cde3ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+.room-box:hover {
+  background-color: #f3f8ff;
+}
+
+.room-box .info {
+  width: 80%;
+}
+
+.room-box .info h3 {
+  margin: 0;
+  color: #003366;
+}
+
+.room-box .info p {
+  margin: 4px 0;
+}
+
+.room-box button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.room-box button:hover {
+  background-color: #0055aa;
+}
+
+.status.red {
+  color: red;
+  font-weight: bold;
+}
+
+/* Container daftar kamar */
+.room-details {
+  padding: 30px 50px;
+}
+
+.room-details h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #003366;
+}
+
+/* List container */
+.room-list-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Box per kamar */
+.room-box {
+  background: #ffffff;
+  border: 1px solid #d4e6ff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+}
+
+.room-box:hover {
+  background: #f5faff;
+  border-color: #b5d4ff;
+}
+
+/* Judul kamar */
+.room-box h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #003366;
+  font-weight: 600;
+}
+
+/* Teks info kamar */
+.room-box p {
+  margin: 3px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Status kamar */
+.status-not-available {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Tombol pesan */
+.room-box button {
+  margin-top: 10px;
+  width: fit-content;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.room-box button:hover {
+  background-color: #005bbd;
+}
+
+/* Foto kamar */
+.room-photo {
+  width: 180px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* ==========================
+   🧾 FORM PEMESANAN DAN STRUK
+========================== */
+.booking-form {
+  position: relative;
+  padding: 60px 10%;
+  text-align: center;
+  background: #f8fafc; 
+  background: url("image/logo-grandhotel.png") no-repeat center center/cover;
+}
+
+/* Lapisan blur di atas gambar (overlay) */
+.booking-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: blur(1px); /* sedikit blur */
+}
+
+.booking-form h2 {
+  font-size: 2em;
+  color: #002b80;
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Card form */
+.booking-form form {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.booking-form form::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  right: 10px;
+  width: 120px;
+  height: 120px;
+  background: url('image/logo-grandhotel\ -\ Copy.png') no-repeat center/contain;
+  opacity: 1;
+  z-index: -1;
+}
+
+.booking-form label {
+  text-align: left;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #002b80;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background: #f8fafc;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+  outline: none;
+  background: #fff;
+}
+
+/* Tombol kirim pemesanan/booking*/
+.booking-form button {
+  background: linear-gradient(to right, #779cec, #0b3d91);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.booking-form button:hover {
+  background: linear-gradient(to right, #1e40af, #1d4ed8);
+  transform: scale(1.02);
+}
+
+/* Pesan sukses dari pemesanan/booking*/
+#result {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  display: none; /* akan dimunculkan oleh JS */
+}
+
+/* ===== Kartu Riwayat ===== */
+ body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      padding: 30px;
+    }
+    .struk {
+      background: #fff;
+      padding: 25px 40px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      padding: 8px 0;
+      vertical-align: top;
+    }
+    .total {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #b8860b;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background: #b8860b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .btn:hover {
+      background: #d4a017;
+    }
+
+ /* ==========================
+   📝 LAPORAN Dan PENILAIAN
+========================== */
+.laporan-intro {
+  position: relative;
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #eaf2ff 0%, #ffffff 50%, #dce6f9 100%);
+  border-bottom: 3px solid #a0c4ff;
+  box-shadow: 0 6px 20px rgba(0, 40, 85, 0.1);
+  overflow: hidden;
+}
+
+.laporan-intro::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 102, 204, 0.2), transparent 70%);
+  z-index: 0;
+}
+
+.laporan-intro::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.25), transparent 70%);
+  z-index: 0;
+}
+
+/* Container agar teks tetap rapi */
+.laporan-intro .intro-container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 100, 200, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 50, 120, 0.1);
+}
+
+/* Judul dengan efek elegan */
+.laporan-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #003b8b;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(90deg, #003b8b, #0078d4, #00b4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraf */
+.laporan-intro p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #1e2a38;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
+}
+
+.penilaian-intro {
+  text-align: center;
+  padding: 70px 20px 50px;
+  background: linear-gradient(180deg, #e9f1ff 0%, #ffffff 100%);
+  border-bottom: 3px solid #004aad;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 64, 128, 0.1);
+}
+
+.penilaian-intro::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(0, 85, 255, 0.15), transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+.penilaian-intro::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(0, 128, 255, 0.1), transparent 70%);
+  border-radius: 50%;
+  animation: float 7s ease-in-out infinite alternate-reverse;
+}
+
+.penilaian-intro .intro-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.penilaian-intro h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #003b8b, #0078d4, #00b4ff); /* WARNA GRADIENT TEKS */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  /* BAYANGAN TEKS */
+}
+
+.penilaian-intro p {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 20px;
+  border-radius: 15px;
+  display: inline-block;
+  border: 1px solid rgba(0, 85, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 64, 128, 0.1);
+}
+
+/* REVIEW SECTION */
+.review-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.review-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #003b8b, #0078d4, #00b4ff); /* WARNA GRADIENT TEKS */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);  /* BAYANGAN TEKS */
+}
+
+.review-box {
+    background: #ffffff;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 2px solid rgba(0, 64, 128, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 64, 128, 0.08);
+    transition: 0.25s ease-in-out;
+}
+
+.review-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 64, 128, 0.15);
+}
+
+.review-icon {
+    font-size: 50px;
+    color: #0056d6;
+    flex-shrink: 0;
+}
+
+.review-detail {
+    flex: 1;
+}
+
+.review-detail .nama {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #003c99;
+    margin-bottom: 5px;
+}
+
+.review-detail .bintang {
+    margin: 6px 0;
+}
+
+.review-detail .bintang i {
+    color: #ffcc00;
+    margin-right: 3px;
+    font-size: 1.2rem;
+}
+
+.review-detail .keterangan {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 650px) {
+    .review-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .review-icon {
+        font-size: 40px;
+    }
+
+    .review-detail .nama {
+        font-size: 1.15rem;
+    }
+}
+
+ 
+/* 📞 FOOTER */
+footer {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 3px solid #3b82f6;
+}
+

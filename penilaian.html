@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penilaian - Grand Hotel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="image/logo-grandhotel.png" alt="Logo Grand Hotel" class="logo-img">
+      <div class="logo-text">
+        <h1>GRAND HOTEL</h1>
+        <p>Luxury & Comfort</p>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="penilaian.php" class="active">Penilaian</a></li>
+      <li><a href="akun.html" class="akun-icon"><i class="fa-solid fa-user"></i></a></li>
+    </ul>
+  </header>
+
+  <section class="penilaian-intro">
+  <div class="intro-container">
+    <h2>💙 Beri Penilaian untuk Grand Hotel</h2>
+    <p>
+      Pendapat Anda sangat berharga bagi kami!  
+      Jika Anda merasa puas, beri kami bintang terbaik.  
+      Jika ada yang perlu ditingkatkan, tuliskan saran Anda agar kami bisa menjadi lebih baik ✨
+    </p>
+  </div>
+  </section>
+
+  <section class="booking-form">
+    <form id="ratingForm" method="POST" action="penilaian.php">
+      <label>Nama</label>
+      <input type="text" name="nama" required placeholder="Masukkan nama anda ">
+
+      <label>Keterangan</label>
+      <textarea name="keterangan" placeholder="Tulis pengalaman Anda di Grand Hotel..." rows="5" required></textarea>
+
+      <label>Bintang</label>
+      <select name="bintang" required>
+        <option value="1">⭐ 1</option>
+        <option value="2">⭐⭐ 2</option>
+        <option value="3">⭐⭐⭐ 3</option>
+        <option value="4">⭐⭐⭐⭐ 4</option>
+        <option value="5">⭐⭐⭐⭐⭐ 5</option>
+      </select>
+
+      <button type="submit" name="kirim">Kirim Penilaian</button>
+    </form>
+    <p id="thanksMsg" style="display:none" class="success">Terima kasih atas penilaian Anda! 😊</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Grand Hotel | All Rights Reserved.</p>
+  </footer>
+
+   <script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get('status') === 'sukses') {
+      // tampilkan pesan
+      document.getElementById("thanksMsg").style.display = "block";
+
+      // redirect otomatis ke penilaian.html setelah 2 detik
+      setTimeout(function() {
+          window.location.href = "penilaian.html";
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

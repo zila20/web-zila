@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Struk Pemesanan - Grand Hotel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+  <div class="logo-container">
+  <img src="image/logo-grandhotel.png" alt="Logo Grand Hotel" class="logo-img">
+  <div class="logo-text">
+    <h1>GRAND HOTEL</h1>
+    <p>Luxury & Comfort</p>
+  </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="riwayat.html" class="active">Struk</a></li>
+        <li><a href="penilaian.html">Penilaian</a></li>
+        <li><a href="akun.html" class="akun-icon"><i class="fa-solid fa-user"></i></a></li>
+      </ul>
+    </nav>
+    </header>
+
+  <div class="struk">
+    <h2>🧾 BUKTI PEMESANAN<br>GRAND HOTEL</h2>
+
+    <table>
+      <tr><td><strong>Nama Pemesan</strong></td><td><?= htmlspecialchars($data['nama']) ?></td></tr>
+      <tr><td>Umur</td><td><?= htmlspecialchars($data['umur']) ?> tahun</td></tr>
+      <tr><td>Jenis Kelamin</td><td><?= htmlspecialchars($data['jk']) ?></td></tr>
+      <tr><td>Jumlah Orang</td><td><?= htmlspecialchars($data['orang']) ?></td></tr>
+      <tr><td>Tipe Kamar</td><td><?= htmlspecialchars($data['tipe']) ?></td></tr>
+      <tr><td>Nomor Kamar</td><td><?= htmlspecialchars($data['kamar']) ?></td></tr>
+      <tr><td>Check-in</td><td><?= htmlspecialchars($data['checkin']) ?></td></tr>
+      <tr><td>Check-out</td><td><?= htmlspecialchars($data['checkout']) ?></td></tr>
+      <tr><td>Metode Pembayaran</td><td><?= htmlspecialchars($data['pembayaran']) ?></td></tr>
+      <tr><td>Lama Menginap</td><td>
+        <?php
+          $lama = (strtotime($data['checkout']) - strtotime($data['checkin'])) / 86400;
+          echo $lama . " malam";
+        ?>
+      </td></tr>
+      <tr class="total"><td>Total Pembayaran</td>
+        <td>Rp <?= number_format($data['total'], 0, ',', '.') ?></td></tr>
+    </table>
+
+    <button class="btn" onclick="window.print()">🖨️ Cetak Struk</button>
+  </div>
+
+</body>
+</html>
